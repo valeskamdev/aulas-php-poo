@@ -8,15 +8,15 @@
   <title>Exemplo</title>
 </head>
 <body>
-    <h1>PHP com POO - Exemplo 1</h1>
+    <h1>PHP com POO - Exemplo 2</h1>
     <hr>
 
     <h2>Criação de classe</h2>
 
     <ul>
-      <li>Criação de classe</li>
-      <li>Importação do arquivo de classe</li>
-      <li>Criação de instâncias/objetos</li>
+      <li>Acesso direto às propriedades</li>
+      <li>Atribuição e leitura de dados</li>
+      <li>Chamada de métodos</li>
     </ul>
 
     <?php
@@ -27,8 +27,20 @@
     $clienteA = new Cliente();
     $clienteB = new Cliente();
 
-    var_dump($clienteA, $clienteB);
+    // Acesso e atribuição
+    $clienteA->nome = "Júlia";
+    $clienteB->nome = "Daniel";
 
+    $clienteA->telefones = ["11 98765-4321", "21 98567-4353"];
+    $clienteA->email = "julia_nogueira@gmail.com";
+    $clienteA->senha = password_hash("julia123", PASSWORD_DEFAULT);
     ?>
+
+    <hr>
+    <h2>Dados dos objetos (acesso e leitura)</h2>
+    <h3><?= $clienteA->nome ?></h3>
+    <h3><?= $clienteB->nome ?></h3>
+
+    <?php  var_dump($clienteA, $clienteB); ?>
 </body>
 </html>
