@@ -38,8 +38,16 @@
 
     <hr>
     <h2>Dados dos objetos (acesso e leitura)</h2>
-    <h3><?= $clienteA->nome ?></h3>
-    <h3><?= $clienteB->nome ?></h3>
+    <h3>Nome: <?= $clienteA->nome ?></h3>
+    <h3>E-mail: <?= $clienteA->email ?></h3>
+    <h3>Telefones: <?= implode(", ", $clienteA->telefones) ?></h3>
+    <h3>Telefones: <?= $clienteA->telefones[0] ?>, <?= $clienteA->telefones[1] ?></h3>
+    <p>Telefones: utilizando loop</p>
+    <ul>
+      <?php foreach ($clienteA->telefones as $telefone) : ?>
+      <li><?= $telefone ?></li>
+      <?php endforeach; ?>
+    </ul>
 
     <?php  var_dump($clienteA, $clienteB); ?>
 </body>
