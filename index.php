@@ -29,8 +29,8 @@
     $clienteA->setNome("Rafaela Morais");
 
     var_dump($clienteA);
-
-
     ?>
+
+    <p>Nome: <?= $clienteA->getNome(); ?></p>
 </body>
 </html>
