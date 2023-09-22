@@ -27,10 +27,14 @@
     // $clienteA->nome = "Higor";
 
     $clienteA->setNome("Rafaela Morais");
+    $clienteA->setEmail("rafaela_morais@gmail.com");
+    $clienteA->setSenha("refa123");
 
     var_dump($clienteA);
     ?>
 
     <p>Nome: <?= $clienteA->getNome(); ?></p>
+    <p>Email: <?= $clienteA->getEmail(); ?></p>
+    <p>Senha: <?= $clienteA->getSenha(); ?></p>
 </body>
 </html>
