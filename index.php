@@ -16,8 +16,8 @@
     <ul>
       <li>Herança (Super Classe e Sub Classe)</li>
       <li>Métodos/propriedades protegidas (acessíveis apenas peka classe em que foram definidas e pelas subclasses)</li>
-      <li>Classe Abstrata (não pode ser instanciada)</li>
-      <li>Classe Final (não pode ser herdada)</li>
+      <li>Classe Abstrata (não pode ser instanciada, serve apenas de modelo para subclasses)</li>
+      <li>Classe Final (não pode ser herdada, não aceita criação de subclasses)</li>
     </ul>
 
     <?php
