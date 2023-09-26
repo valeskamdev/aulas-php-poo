@@ -5,14 +5,14 @@ class Cliente
     private string $nome;
     private string $email;
     private string $senha;
+    private string $situacao = "a definir";
 
-    // Métodos getters e setters
-    public function setNome(string $nome) : void
+    public function setNome(string $nome): void
     {
         $this->nome = $nome;
     }
 
-    public function getNome() : string
+    public function getNome(): string
     {
         return $this->nome;
     }
@@ -35,6 +35,28 @@ class Cliente
     public function getSenha(): string
     {
         return $this->senha;
+    }
+
+    /*
+     * Visibilidade PROTECTED
+     * Esses getters e setters só podem ser acessados pela classe Cliente
+     * e suas subclasses (PessoaFisica e PessoaJuridica)
+     * */
+
+    /**
+     * @return string
+     */
+    protected function getSituacao(): string
+    {
+        return $this->situacao;
+    }
+
+    /**
+     * @param  string  $situacao
+     */
+    protected function setSituacao(string $situacao): void
+    {
+        $this->situacao = $situacao;
     }
 
 
