@@ -15,6 +15,9 @@
 
     <ul>
       <li>Herança (Super Classe e Sub Classe)</li>
+      <li>Métodos/propriedades protegidas (acessíveis apenas peka classe em que foram definidas e pelas subclasses)</li>
+      <li>Classe Abstrata (não pode ser instanciada)</li>
+      <li>Classe Final (não pode ser herdada)</li>
     </ul>
 
     <?php
@@ -39,6 +42,16 @@
     $clientePJ->setNomeFantasia("Seastorm");
 
     var_dump($clientePJ);
+    ?>
+
+    <hr>
+
+    <?php
+    require_once "src/Cliente.php";
+
+
+
+
     ?>
 </body>
 </html>
