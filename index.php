@@ -47,10 +47,15 @@
     <hr>
 
     <?php
-    require_once "src/Cliente.php";
+    require_once "src/MEI.php";
 
+    $clienteMei = new MEI();
+    $clienteMei->setNome("Mariana Júlia");
+    $clienteMei->setAnoFundacao(2023);
+    $clienteMei->setNomeFantasia("Marina Empreendimentos");
+    $clienteMei->setAreaDeAtuacao("Ervas medicinais");
 
-
+    var_dump($clienteMei);
 
     ?>
 </body>
