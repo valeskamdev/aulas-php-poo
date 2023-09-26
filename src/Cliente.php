@@ -29,7 +29,7 @@ class Cliente
 
     public function setSenha(string $senha): void
     {
-        $this->senha = filter_var($senha, PASSWORD_DEFAULT);
+        $this->senha = password_hash($senha, PASSWORD_DEFAULT);
     }
 
     public function getSenha(): string
