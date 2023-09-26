@@ -5,36 +5,40 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Exemplo 4</title>
+  <title>Exemplo 5</title>
 </head>
 <body>
-    <h1>PHP com POO - Exemplo 4</h1>
+    <h1>PHP com POO - Exemplo 5</h1>
     <hr>
 
     <h2>Assuntos abordados</h2>
 
     <ul>
-      <li>Encapsulamento</li>
-      <li>Modificadores de visibilidade (public, private, protected)</li>
+      <li>Herança (Super Classe e Sub Classe)</li>
     </ul>
 
     <?php
-    require_once "src/Cliente.php";
+    require_once "src/PessoaFisica.php";
+    require_once "src/PessoaJuridica.php";
 
-    $clienteA = new Cliente();
+    $clientePF = new PessoaFisica();
 
-     // O código abaixo dara erro pois a propriedade é privada e NÂO pode ser acessada fora da classe
-    // $clienteA->nome = "Higor";
+    $clientePF->setNome("César");
+    $clientePF->setEmail("cesar324@mail.com");
+    $clientePF->setIdade(21);
+    $clientePF->setCpf("423-342-456-34");
 
-    $clienteA->setNome("Rafaela Morais");
-    $clienteA->setEmail("rafaela_morais@gmail.com");
-    $clienteA->setSenha("refa123");
+    var_dump($clientePF);
 
-    var_dump($clienteA);
+    $clientePJ = new PessoaJuridica();
+
+    $clientePJ->setNome("Juliana Oliveira");
+    $clientePJ->setEmail("seastorm@gmail.com");
+    $clientePJ->setAnoFundacao(2008);
+    $clientePJ->setCnpj("32.534.5343/4322.41");
+    $clientePJ->setNomeFantasia("Seastorm");
+
+    var_dump($clientePJ);
     ?>
-
-    <p>Nome: <?= $clienteA->getNome(); ?></p>
-    <p>Email: <?= $clienteA->getEmail(); ?></p>
-    <p>Senha: <?= $clienteA->getSenha(); ?></p>
 </body>
 </html>
