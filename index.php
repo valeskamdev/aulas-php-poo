@@ -14,45 +14,8 @@
     <h2>Assuntos abordados</h2>
 
     <ul>
-      <li>Polimorfismo</li>
-      <li>Sobreposição de métodos</li>
-      <li>Uso do <code>parent</code> para acessar superclasse</li>
+      <li>Propriedades e métodos estáticos</li>
+      <li>Acesso direto sem necessidade de objetos/instnacias</li>
     </ul>
-
-    <?php
-    require_once "src/PessoaFisica.php";
-    require_once "src/PessoaJuridica.php";
-
-    $clientePF = new PessoaFisica();
-
-    $clientePF->setNome("César");
-    $clientePF->setEmail("cesar324@mail.com");
-    $clientePF->setIdade(21);
-    $clientePF->setCpf("423-342-456-34");
-
-    var_dump($clientePF);
-
-    $clientePJ = new PessoaJuridica();
-
-    $clientePJ->setNome("Juliana Oliveira");
-    $clientePJ->setEmail("seastorm@gmail.com");
-    $clientePJ->setAnoFundacao(2008);
-    $clientePJ->setCnpj("32.534.5343/4322.41");
-    $clientePJ->setNomeFantasia("Seastorm");
-
-    var_dump($clientePJ);
-    ?>
-
-    <hr>
-
-    <h2>Saída de dados</h2>
-
-    <section>
-      <?= $clientePF->exibirDados(); ?>
-    </section>
-
-    <section>
-        <?= $clientePJ->exibirDados(); ?>
-    </section>
 </body>
 </html>
