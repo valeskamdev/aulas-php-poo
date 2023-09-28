@@ -13,6 +13,15 @@ class PessoaJuridica extends Cliente
         $this->setSituacao("em análise");
     }
 
+    public function exibirDados(): void
+    {
+        echo "<h3>Método exibirDados - Classe Juridica</h3>";
+        echo "<h4>" . $this->getNome() . "</h4>";
+
+        echo "<p>Situação:" . $this->getSituacao() . "</p>";
+        echo "<p>Nome Fantasia: $this->nomeFantasia </p>";
+    }
+
     /**
      * @return int
      */
