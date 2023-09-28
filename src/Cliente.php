@@ -11,6 +11,14 @@ abstract class Cliente
     private string $senha;
     private string $situacao = "a definir";
 
+    public function exibirDados() : void
+    {
+        echo "<h3>Método exibirDados - Classe Cliente</h3>";
+        echo "<h4> $this->nome </h4>";
+
+        echo "<p>Situação: $this->situacao </p>";
+    }
+
     public function setNome(string $nome): void
     {
         $this->nome = $nome;

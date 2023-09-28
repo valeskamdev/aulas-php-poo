@@ -8,16 +8,12 @@
   <title>Exemplo 5</title>
 </head>
 <body>
-    <h1>PHP com POO - Exemplo 5</h1>
+    <h1>PHP com POO - Exemplo 6</h1>
     <hr>
 
     <h2>Assuntos abordados</h2>
 
     <ul>
-      <li>Herança (Super Classe e Sub Classe)</li>
-      <li>Métodos/propriedades protegidas (acessíveis apenas peka classe em que foram definidas e pelas subclasses)</li>
-      <li>Classe Abstrata (não pode ser instanciada, serve apenas de modelo para subclasses)</li>
-      <li>Classe Final (não pode ser herdada, não aceita criação de subclasses)</li>
     </ul>
 
     <?php
@@ -46,17 +42,14 @@
 
     <hr>
 
-    <?php
-    require_once "src/MEI.php";
+    <h2>Saída de dados</h2>
 
-    $clienteMei = new MEI();
-    $clienteMei->setNome("Mariana Júlia");
-    $clienteMei->setAnoFundacao(2023);
-    $clienteMei->setNomeFantasia("Marina Empreendimentos");
-    $clienteMei->setAreaDeAtuacao("Ervas medicinais");
+    <section>
+      <?= $clientePF->exibirDados(); ?>
+    </section>
 
-    var_dump($clienteMei);
-
-    ?>
+    <section>
+        <?= $clientePJ->exibirDados(); ?>
+    </section>
 </body>
 </html>
