@@ -13,10 +13,8 @@ abstract class Cliente
 
     public function exibirDados() : void
     {
-        echo "<h3>Método exibirDados - Classe Cliente</h3>";
         echo "<h4> $this->nome </h4>";
-
-        echo "<p>Situação: $this->situacao </p>";
+        echo "<p>Situação:" . $this->getSituacao() . "</p>";
     }
 
     public function setNome(string $nome): void

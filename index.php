@@ -5,15 +5,18 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Exemplo 5</title>
+  <title>Exemplo 7</title>
 </head>
 <body>
-    <h1>PHP com POO - Exemplo 6</h1>
+    <h1>PHP com POO - Exemplo 7</h1>
     <hr>
 
     <h2>Assuntos abordados</h2>
 
     <ul>
+      <li>Polimorfismo</li>
+      <li>Sobreposição de métodos</li>
+      <li>Uso do <code>parent</code> para acessar superclasse</li>
     </ul>
 
     <?php

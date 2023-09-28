@@ -15,12 +15,10 @@ class PessoaJuridica extends Cliente
 
     public function exibirDados(): void
     {
-        echo "<h3>Método exibirDados - Classe Juridica</h3>";
-        echo "<h4>" . $this->getNome() . "</h4>";
-
-        echo "<p>Situação:" . $this->getSituacao() . "</p>";
-        echo "<p>Nome Fantasia: $this->nomeFantasia </p>";
+        parent::exibirDados(); // permite o acesso ao método exibirDados() da classe Pai (Cliente)
+        echo "<p>Nome Fantasia: $this->nomeFantasia</p>";
     }
+
 
     /**
      * @return int
