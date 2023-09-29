@@ -40,5 +40,56 @@
 
     var_dump($pagamentoFornecedor, $pagamentoPrestador);
     ?>
+    <hr>
+
+    <?php
+    require_once "src/PessoaFisica.php";
+    require_once "src/PessoaJuridica.php";
+    require_once "src/MEI.php";
+
+    use Tabajara\ { PessoaFisica, PessoaJuridica, MEI };
+
+    $clientePF = new PessoaFisica();
+    $clientePJ = new PessoaJuridica();
+    $clienteMEI = new MEI();
+
+    $clientePF->setNome("Higor Martins");
+    $clientePF->setEmail("higormartins@gmail.com");
+
+    $clientePJ->setNome("Sabrina Fabil");
+    $clientePJ->setEmail("sabrina3231@hotmail.com");
+    $clientePJ->setCnpj("3131.534543/4JU89-98");
+
+    $clienteMEI->setNome("Kiara Uira");
+    $clienteMEI->setEmail("kiaraui@yahoo.com");
+    $clienteMEI->setAreaDeAtuacao("Letras");
+    ?>
+
+    <fieldset>
+      <legend>Pessoa Física</legend>
+      <p>Nome: <?=$clientePF->getNome()?></p>
+      <p>Email: <?=$clientePF->getEmail()?></p>
+    </fieldset>
+
+
+    <fieldset>
+      <legend>Pessoa Jurídica</legend>
+
+      <p>Nome: <?=$clientePJ->getNome()?></p>
+      <p>Email: <?=$clientePJ->getEmail()?></p>
+      <p>CNPJ: <?=$clientePJ->getCnpj()?></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Pessoa MEI</legend>
+      <p>Nome: <?=$clienteMEI->getNome()?></p>
+      <p>Email: <?=$clienteMEI->getEmail()?></p>
+      <p>Área de atuação: <?=$clienteMEI->getAreaDeAtuacao()?></p>
+    </fieldset>
+
+
+
+
+
 </body>
 </html>
