@@ -23,7 +23,7 @@
 
     use fornecedores\Pagamento;
     use prestadores\Pagamento as PrestadorPagamento;
-    use Tabajara\ { PessoaFisica, PessoaJuridica, MEI };
+    use Tabajara\ { Escola, PessoaFisica, PessoaJuridica, MEI };
 
     require_once "vendor/autoload.php";
 
@@ -69,5 +69,13 @@
       <p>Área de atuação: <?=$clienteMEI->getAreaDeAtuacao()?></p>
     </fieldset>
 
+    <hr>
+
+    <?php
+
+    $escola = new Escola();
+
+    var_dump($escola);
+    ?>
 </body>
 </html>
