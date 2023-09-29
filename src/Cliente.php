@@ -1,8 +1,6 @@
 <?php
 namespace Tabajara;
 
-require_once "Cliente.php";
-
 /*
  * classe abstrata, não pode ser instanciada, ou seja,
  * nao pode ser criado um objeto a partir dela

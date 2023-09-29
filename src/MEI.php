@@ -1,7 +1,6 @@
 <?php
 namespace Tabajara;
 
-require_once "Cliente.php";
 /*
  * classe final, não pode ser herdada, ou seja,
  * não pode ser criada uma subclasse a partir dela

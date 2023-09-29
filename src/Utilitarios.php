@@ -1,7 +1,6 @@
 <?php
 
 namespace Tabajara;
-
 class Utilitarios
 {
     // propriedade estática

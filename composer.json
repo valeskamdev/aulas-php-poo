@@ -1,0 +1,11 @@
+{
+  "name": "valeska/aulas-php-poo",
+  "description": "Exemplo de projeto PHP com Orientação a Objetos e com classe gerenciada pelo Composer.",
+  "autoload": {
+    "psr-4": {
+      "Tabajara\\": "src/",
+      "fornecedores\\": "src/fornecedores/",
+      "prestadores\\": "src/prestadores/"
+    }
+  }
+}

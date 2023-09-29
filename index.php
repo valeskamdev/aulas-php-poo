@@ -14,40 +14,23 @@
     <h2>Assuntos abordados</h2>
 
     <ul>
-      <li>Namespaces: agrupamento e organização de recursos (classes, funções, constantes)</li>
-      <li>Prevenção de conflitos entre classes de mesmo nome</li>
-      <li>Configurar e usar <code>namespaces</code> e <code>alias</code></li>
+      <li>Composer: gerenciador de dependência PHP</li>
+      <li>Configurar o projeto com Composer usando <code>composer.json</code></li>
+      <li>Autoload de classes evitando muitos requires e/ou require manuais</li>
     </ul>
 
     <?php
-    /*
-     * Só de fazer o require/importação das classes (SEM NAMESPACE),
-     * já da erro no servidor devido a ter duas classes com o mesmo nome
-     */
-    require_once "src/fornecedores/Pagamento.php";
-    require_once "src/prestadores/Pagamento.php";
 
-    // Forma 1: de usar classes com namespace
-    // $pagamentoFornecedor = new \fornecedores\Pagamento();
-    // $pagamentoPrestador = new \prestadores\Pagamento();
-
-    // Forma 2: de usar classes com namespace
     use fornecedores\Pagamento;
-    use prestadores\Pagamento as PrestadorPagamento; // alias (apelido)
+    use prestadores\Pagamento as PrestadorPagamento;
+    use Tabajara\ { PessoaFisica, PessoaJuridica, MEI };
+
+    require_once "vendor/autoload.php";
 
     $pagamentoFornecedor = new Pagamento();
     $pagamentoPrestador = new PrestadorPagamento();
 
     var_dump($pagamentoFornecedor, $pagamentoPrestador);
-    ?>
-    <hr>
-
-    <?php
-    require_once "src/PessoaFisica.php";
-    require_once "src/PessoaJuridica.php";
-    require_once "src/MEI.php";
-
-    use Tabajara\ { PessoaFisica, PessoaJuridica, MEI };
 
     $clientePF = new PessoaFisica();
     $clientePJ = new PessoaJuridica();
@@ -74,7 +57,6 @@
 
     <fieldset>
       <legend>Pessoa Jurídica</legend>
-
       <p>Nome: <?=$clientePJ->getNome()?></p>
       <p>Email: <?=$clientePJ->getEmail()?></p>
       <p>CNPJ: <?=$clientePJ->getCnpj()?></p>
@@ -86,10 +68,6 @@
       <p>Email: <?=$clienteMEI->getEmail()?></p>
       <p>Área de atuação: <?=$clienteMEI->getAreaDeAtuacao()?></p>
     </fieldset>
-
-
-
-
 
 </body>
 </html>
