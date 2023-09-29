@@ -2,6 +2,7 @@
 
 require_once "src/PessoaJuridica.php";
 
+namespace Tabajara;
 /*
  * classe final, não pode ser herdada, ou seja,
  * não pode ser criada uma subclasse a partir dela

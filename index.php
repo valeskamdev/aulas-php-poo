@@ -39,7 +39,6 @@
     $pagamentoPrestador = new PrestadorPagamento();
 
     var_dump($pagamentoFornecedor, $pagamentoPrestador);
-
     ?>
 </body>
 </html>
